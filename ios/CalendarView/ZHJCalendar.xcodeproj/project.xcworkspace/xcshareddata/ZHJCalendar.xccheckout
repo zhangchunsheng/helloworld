@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>872FA949-C065-4009-AE83-56D61F4005C1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ZHJCalendar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EC350787-4AF5-49C6-A3B6-CB115B9654C6</key>
+		<string>https://github.com/heavensword/CalendarView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ZHJCalendar/ZHJCalendar.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EC350787-4AF5-49C6-A3B6-CB115B9654C6</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/heavensword/CalendarView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EC350787-4AF5-49C6-A3B6-CB115B9654C6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EC350787-4AF5-49C6-A3B6-CB115B9654C6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CalendarView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
