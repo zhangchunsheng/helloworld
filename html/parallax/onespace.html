@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>One-Space | 豌豆荚</title>
+    <meta http-equiv="mobile-agent" content="format=html5; url=http://www.wandoujia.com/onespace">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="豌豆荚,可穿戴设备,全息投影,增强现实,One-Space">
+    <meta name="description" content="豌豆荚 One-Space 发布——完美集成「手机娱乐搜索」及「增强现实」的智能服装，彻底改变局限在小屏幕上的娱乐体验，通过全息投影创造「沉浸式空间」呈现丰富内容，还可以将远方好友投影到身边实时互动！">
+    <link rel="stylesheet" href="./onespace/styles/onespace.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:900">
+    <script src="./onespace/scripts/onespace.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        if(jQuery.browser.mobile || window.innerWidth < 1024) {
+            $(".lazy").remove();
+            $(".sequence-container").remove();
+        } else {
+            $("img.lazy").lazyload({
+                skip_invisible : false,
+                effect : "fadeOut"
+            });
+        }
+
+        if(window.innerWidth > 767) {
+            $("body").queryLoader2({
+                barColor: "#fff",
+                backgroundColor: "#19ab43",
+                percentage: true,
+                barHeight: 2,
+                completeAnimation: "grow"
+            });
+        }
+    });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Begin Nav -->
+        <div id="header">
+            <div id="wdj-logo-wrap">
+                <a href="http://www.wandoujia.com">
+                    <i class="wan-wdj-logo" data-0="color: white"
+                    data-3448="color: green;"
+                    data-4448="color: white"></i>
+                    <span></span>
+                </a>
+            </div>
+            <ul id="share" data-0="top: 0px;background:rgba(0,0,0,0);" data-50="top: -50px;background:rgba(0,0,0,0);">
+                <li id="s_weibo" title="分享到新浪微博">
+                    <i class="icon-weibo"></i><span class="tip">分享到新浪微博</span>
+                </li>
+                <li id="s_douban" title="分享到豆瓣">
+                    <i class="icon-douban"></i><span class="tip">分享到豆瓣</span>
+                </li>
+                <li id="s_wechat" title="分享到微信">
+                    <a href="#panel_weixin" class="fancybox">
+                        <i class="icon-wechat"></i><span class="tip">分享到微信</span>
+                    </a>
+                </li>
+                <li id="s_renren" title="分享到人人网">
+                    <i class="icon-renren"></i><span class="tip">分享到人人网</span>
+                </li>
+                <li id="s_q-zone" title="分享到Q-Zone">
+                    <i class="icon-qzone"></i><span class="tip">分享到Q-Zone</span>
+                </li>
+                <li id="s_baidutieba" title="分享到百度贴吧">
+                    <i class="icon-baidu"></i><span class="tip">分享到百度贴吧</span>
+                </li>
+                <li id="s_twitter" title="分享到 Twitter">
+                    <i class="fa fa-twitter"></i><span class="tip">分享到 Twitter</span>
+                </li>
+                <li id="s_facebook" title="分享到 Facebook">
+                    <i class="fa fa-facebook"></i><span class="tip">分享到 Facebook</span>
+                </li>
+                <li id="s_googleplus" title="分享到 Google+">
+                    <i class="fa fa-google-plus"></i><span class="tip">分享到 Google+</span>
+                </li>
+            </ul>
+            <div id="share_toggle" data-0="top:-42px;" data-100="top:0px;">
+                分享
+            </div>
+        </div>
+        <!-- End Nav -->
+
+        <!-- Begin PersistentNav -->
+        <div id="persistentNav">
+            <div id="apply_btn" class="overlay_btn" data-0="right:-170px;"  data-450="right:-15px;">
+                <i class="fa fa-dot-circle-o"></i>
+                <span class="tip">申请试用</span>
+            </div>
+
+            <ul id="rightNav">
+                <li><a class="nav" href="#section_1"
+                    data-0="background: green;"
+                    data-848="background: black">
+                    <span>1</span></a>
+                </li>
+                <li><a class="nav" href="#section_2"
+                    data-0="background: black"
+                    data-849="background: green;"
+                    data-1348="background: black">
+                    <span>2</span></a>
+                </li>
+                <li><a class="nav" href="#section_3"
+                    data-0="background: black"
+                    data-1348="background: green;"
+                    data-2148="background: black">
+                    <span>3</span></a>
+                </li>
+                <li><a class="nav" href="#section_4"
+                    data-0="background: black"
+                    data-2148="background: green;"
+                    data-2648="background: black">
+                    <span>4</span></a>
+                </li>
+                <li><a class="nav" href="#section_5"
+                    data-0="background: black"
+                    data-2648="background: green;"
+                    data-3448="background: black">
+                    <span>5</span></a>
+                </li>
+                <li><a class="nav" href="#section_6"
+                    data-0="background: black"
+                    data-3448="background: green;"
+                    data-4448="background: black">
+                    <span>6</span></a>
+                </li>
+                <li><a class="nav" href="#section_7"
+                    data-0="background: black"
+                    data-4448="background: green;"
+                    data-5248="background: black">
+                    <span>7</span></a>
+                </li>
+                <li><a class="nav" href="#section_8"
+                    data-0="background: black"
+                    data-5248="background: green;"
+                    data-5748="background: black">
+                    <span>8</span></a>
+                </li>
+            </ul>
+            <a id="goTop" href="#section_1" data-0="display: none"
+                    data-849="display: block;"
+                    data-5748="display: block"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- End PersistentNav -->
+
+        <!-- Begin Section -->
+        <div id="section_1" class="section-wrapper">
+
+            <div id="parallax9" data-0="background-position: center 0px;" data-850="background-position: center -170px;"></div>
+
+            <!-- front -->
+            <div id="parallax10" data-0="background-position: center 120px;" data-900="background-position: center -570px;"></div>
+
+            <!-- back blur ice -->
+            <div id="parallax11" data-0="background-position: center 240px;" data-900="background-position: center -870px;"></div>
+
+            <!-- medium -->
+            <div id="parallax12" data-0="background-position: center 200px;" data-900="background-position: center -670px;"></div>
+
+            <div id="parallax4" data-0="background-position: center 200px;background-size:800px;" data-800="background-position: center -340px;"></div>
+
+            <div class="container" data-anchor-target="#section_2" data-0="display:block" data--150-top="display:none">
+
+                <div class="section-head intro-wrapper">
+                    <div class="full centered">
+                        <h1 class="logo">One-Space</h1>
+
+                        <h3>穿在身上的手机娱乐搜索</h3>
+
+                        <div class="start-exploring show overlay_btn">
+                            <div class="button"><i class="fa fa-dot-circle-o"></i>申请试用</div>
+                            <div class="bottom-line"></div>
+                            <div class="right-border"></div>
+                            <div class="top-border"></div>
+                            <div class="left-border"></div>
+                            <div class="bottom-border"></div>
+                            <div class="rectangle-border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="scroll_btn" href="#section_2" class="nav"><i class="fa fa-chevron-down"></i></a>
+        </div>
+
+        <div id="section_2" class="disruptor">
+            <div class="disruptor-container">
+                <div class="center-center">
+                    <a class="fancybox fancybox.iframe play ripple" href="http://player.youku.com/embed/XNjkyOTIxNzg0"><i class="fa fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_3" class="section-wrapper">
+            <div id="section_3_intro" class="container">
+                <div class="section-title" data-top-top="top:100px;" data-600-top="top: -300px;">
+                    <i>.01</i>
+                    <h2 class="spec">Direct Content</h2>
+                    <h2>直达行动</2>
+                </div>
+
+                <div class="summary_wrap">
+                    <div class="summary" id="summary_1">
+                        <ul class="feature_icons">
+                            <li><i class="one_icon one_icon_game"></i></li>
+                        </ul>
+                        <p>One-Space 表层设置有 269 个微型全息投影点，可将手机中的视频、游戏、电子书、壁纸等娱乐内容全息投射到半径 3 米的空间内，360° 情景化呈现。</p>
+                        <canvas id="line_1" width="50" height="125"></canvas>
+                        <div class="ripple sum_ripple_1 bili"></div>
+                    </div>
+
+
+                    <div class="summary" id="summary_2">
+                        <ul class="feature_icons">
+                            <li><i class="one_icon one_icon_3d"></i></li>
+                        </ul>
+                        <p>位于 One-Space 连体帽边缘的 SRS 3D 环绕立体声系统，能够完美还原立体音效，提供富有真实空间感的声场。</p>
+                        <canvas id="line_2" width="464" height="488"></canvas>
+                        <div class="ripple sum_ripple_2"></div>
+                    </div>
+
+                    <div class="summary" id="summary_3">
+                        <ul class="feature_icons">
+                            <li><i class="one_icon one_icon_stereo"></i></li>
+                        </ul>
+                        <p>分布在衣领两侧的高灵敏度立体声电容麦克风，兼容 XY 和 AB 两种拾音制式，根据声源远近自由切换。声色俱全，如临其境。</p>
+                        <canvas id="line_5" width="475" height="185"></canvas>
+                        <div class="ripple sum_ripple_5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="feature_rounders">
+                <div id="stage">
+                    <div id="section_3_pic"></div>
+                    <div id="shape" class="ring backfaces">
+                        <div class="plane one"></div>
+                        <div class="plane two"></div>
+                        <div class="plane three"></div>
+                        <div class="plane four"></div>
+                        <div class="plane five"></div>
+                        <div class="plane six"></div>
+                        <div class="plane seven"></div>
+                        <div class="plane eight"></div>
+                        <div class="plane nine"></div>
+                        <div class="plane ten"></div>
+                        <div class="plane eleven"></div>
+                        <div class="plane twelve"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_4" class="disruptor">
+            <img src="./onespace/images/clothe/model_1.png" data--50-top="margin-left: -560px;" data-top-top="margin-left: -550px;" data-300-top="margin-left: 0px;">
+
+            <div id="back_logo" data-top-top="margin-left: -170px;"  data-300-top="margin-left: 100px;"></div>
+
+            <div id="section_4_intro" class="static-container">
+                <div class="grid">
+                    <div class="section-title"
+                    data-100-top="margin-top: 150px;"
+                    data-500-top="margin-top:600px;">
+                        <h2>即搜即享! <span>So Happy!</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_5" class="disruptor">
+            <div id="model_illusta_left" class="model_illusta">
+                <div class="feature_points"
+                    data-100-top="left:50%;margin-left: 250px;"
+                    data-top-top="left:50%;margin-left:-500px;opacity:1;"
+                    data--500-top="left:50%;margin-left:-1000px;opacity:0;">
+                    <div class="model_illusta_bg"
+                        data-100-top="margin-left:0px;background-size: 220px;"
+                        data-top-top="margin-left:-125px;background-size: 150px;"
+                        data--250-top="margin-left:-250px; background-size: 150px;"></div>
+                </div>
+
+                <div class="circle_border"
+                data-50-top="-moz-transform: scale(0);
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    top: 450px;"
+                data-350-top="-moz-transform: scale(1);
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    top: 350px;"
+                data-450-top="-moz-transform: scale(0);
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    top: 450px;"></div>
+            </div>
+
+            <div id="model_illusta_right" class="model_illusta" data-100-top="right:-100%;" data-top-top="right:-50%;" data--180-top="right:0%;">
+                <div class="feature_points" data-100-top="left:-25%;" data-top-top="left:0%;" data--180-top="left:50%;">
+                    <div class="model_illusta_bg" data-top-top="background-size: 150px;margin-left:0px;opacity:1;" data-100-top="background-size: 220px;margin-left:0px;opacity:0;" data--180-top="margin-left:-250px;opacity:1;"></div>
+                </div>
+            </div>
+
+            <div id="model_illusta_center"
+
+                    data--400-top="
+                        -moz-transform: scale(0);
+                        -webkit-transform: scale(0);
+                        transform: scale(0);
+                        margin-left: -184px;
+                        margin-top: 135px;"
+
+                    data--350-top="-moz-transform: scale(1);
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        margin-left:-184px;
+                        margin-top: 135px;"
+
+                    data-140-top="-moz-transform: scale(1);
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        margin-left:-184px;
+                        margin-top: 135px;
+                        opacity:1;"
+
+                    data-180-top="-moz-transform: scale(0.1);
+                    -webkit-transform: scale(0.1);
+                    transform: scale(0.1);
+                    margin-left:-74px;
+                    margin-top: 20px;
+                    opacity:0;"
+
+                    data-220-top="-moz-transform: scale(0);
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    margin-left:-74px;
+                    margin-top: 10px;
+                    opacity:0;">
+                <span></span>
+                <i></i>
+            </div>
+
+            <div id="summary_card"
+                data-500-top="margin-top:600px;"
+                data-100-top="margin-top:50px;">衣内密布微型动作捕捉点阵，领口设置表情捕捉系统，共同组成 WAN－MOVE 形体还原系统，实时扫描情态动作。当您与他人通过 One-Space 远程连接时，WAN－MOVE 形体还原系统可将双方的实时动态数据传输给彼此，并通过微型全息投影点阵在彼此身边投射出对方形体的全息影像。</div>
+
+
+            <div id="section_5_intro" class="static-container" data-0="display:block;">
+                <div class="grid">
+                    <div class="section-title">
+                        <i>.02</i>
+                        <h2 class="spec">DIRECT ACCESS TO EACH OTHER</h2>
+                        <h2>直达彼此</2>
+                    </div>
+                    <div class="summary_wrap">
+                        <div class="summary">
+                            <p>One-Space 胸前口袋支持 NFC 链接。在手机上打开豌豆荚并开始搜索娱乐内容时，会收到提示是否连接到 One-Space。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_6" class="section-wrapper">
+
+            <div class="container" data-250="display: block; z-index:-1;" >
+                <div class="sequence-container" data--379-top="margin-top: -350px;" data-2000-top="margin-top: -312px;" data-anchor-target="#section_6" style="z-index: -1 !important;">
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_17.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:block;" data-41-top="display:block;" data--220-top="display:none;" />
+
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_16.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--219-top="display:block;" data--260-top="display:none;" />
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_15.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--259-top="display:block;" data--300-top="display:none;" />
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_14.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--299-top="display:block;" data--340-top="display:none;" />
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_13.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--339-top="display:block;" data--380-top="display:none;" />
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_12.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--379-top="display:block;" data--420-top="display:none;" />
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_11.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--419-top="display:block;" data--460-top="display:none;" />
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_10.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--459-top="display:block;" data--500-top="display:none;" />
+                    <img class="lazy" src="./onespace/images/blank.gif" data-original="./onespace/images/clothe/full_model_9.jpg" alt="" data-anchor-target="#section_6" data-2000-top="display:none;" data--499-top="display:block;" data--540-top="display:block;" />
+                </div>
+                <img id="impact-data" src="./onespace/images/clothe/full_model_17.jpg" alt="" >
+            </div>
+        </div>
+
+        <div id="section_7" class="disruptor">
+
+            <div id="section_7_pic" class="summary_wrap">
+                <div class="summary">
+                    <ul class="feature_icons">
+                        <li>
+                            <div class="ripple sum_ripple_3"></div>
+                            <i class="one_icon one_icon_material"></i>
+                            <canvas id="line_3" width="200" height="200"></canvas>
+                            <dl>
+                                <dd>三层 WAN－TEX 户外级免洗面料，由外层面料、WAN－TEX 薄膜、里料压覆而成。</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div class="ripple sum_ripple_4"></div>
+                            <i class="one_icon one_icon_NFC"></i>
+                            <canvas id="line_4" width="200" height="200"></canvas>
+                            <dl>
+                                <dd>One-Space 胸前口袋支持 NFC 链接。</dd>
+                            </dl>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <div id="section_7_intro" class="static-container">
+                <div class="grid">
+                    <div class="section-title">
+                        <i>.03</i>
+                        <h2 class="spec">FINE TIP TECHNOLOGY</h2>
+                        <h2>精尖工艺</2>
+                    </div>
+
+                    <div class="summary_wrap">
+                        <div class="summary">
+                            <p>三层 WAN－TEX 特殊面料制作，轻薄免洗。「动态式」透气功能，有效保持衣内干爽。</p>
+                            <ul class="feature_icons">
+                                <li>
+                                    <i class="tech_icon tech_icon_1"></i>
+                                    <p>面料经过 DWR 防泼水处理，防水系数 6000 mm</p>
+                                </li>
+                                <li>
+                                    <i class="tech_icon tech_icon_2"></i>
+                                    <p>轻薄透气，透气系数约为 30000 g/m²/24h</p>
+                                </li>
+                                <li>
+                                    <i class="tech_icon tech_icon_3"></i>
+                                    <p>「动态式」透气技术，在排出内部湿气的同时，允许外界少量空气渗入</p>
+                                </li>
+                                <li>
+                                    <i class="tech_icon tech_icon_4"></i>
+                                    <p>空气循环速度随着运动剧烈度的提升而增大，有效保持衣内干爽</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_8" class="disruptor">
+            <div id="section_8_intro" class="static-container">
+                <div class="center-center">
+                    <ul>
+                        <li>
+                            <span><i class="fa fa-crop"></i></span>
+                            <h3>立体裁切 <b></b> 精工黏合</h3>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-pagelines"></i></span>
+                            <h3>绿色环保 <b></b> 可回收包装</h3>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-truck"></i></span>
+                            <h3>快捷物流 <b></b> 直达手边</h3>
+                        </li>
+                    </ul>
+                    <div class="start-exploring show overlay_btn">
+                        <div class="button"><i class="fa fa-dot-circle-o"></i>申请试用</div>
+                        <div class="bottom-line"></div>
+                        <div class="right-border"></div>
+                        <div class="top-border"></div>
+                        <div class="left-border"></div>
+                        <div class="bottom-border"></div>
+                        <div class="rectangle-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_9" class="disruptor">
+            <div id="section_9_intro" class="static-container">
+                <div class="center-center">
+                    <div class="section-title"><h2>合作伙伴</h2></div>
+                    <dl>
+                        <dt><a href="http://www.guoku.com" target="_blank">果库</a></dt>
+                        <dt><a href="http://www.shougongke.com" target="_blank">手工课</a></dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- End Section -->
+
+        <!-- Begin Footer -->
+        <div id="footer" class="disruptor">
+            <p class="interpretation">*最终解释权归豌豆荚所有</p>
+            <p class="copyright">&copy; 2010 - 2014 豌豆实验室</p>
+        </div>
+        <!-- End Footer -->
+    </div>
+
+    <div id="form_overlay">
+        <div class="form_overlay_close"> <i class="fa fa-times"></i> </div>
+        <div id="form_content_wrap">
+            <div id="form_content">
+                <div id="form_inner">
+                    <div id="preview_wrap">
+                        <div id="preview_slider">
+                            <img id="curr_preview" src="./onespace/images/clothe/model_detail_1_big.jpg" width="400" height="400" style="display:block">
+
+                            <ul>
+                                <li class="active" data-order="1">
+                                    <a href="javascript:void(0);"><img src="./onespace/images/clothe/model_detail_1.jpg"></a>
+                                </li>
+                                <li data-order="2">
+                                    <a href="javascript:void(0);"><img src="./onespace/images/clothe/model_detail_2.jpg"></a>
+                                </li>
+                                <li data-order="3">
+                                    <a href="javascript:void(0);"><img src="./onespace/images/clothe/model_detail_3.jpg"></a>
+                                </li>
+                                <li data-order="4">
+                                    <a href="javascript:void(0);"><img src="./onespace/images/clothe/model_detail_4.jpg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="form_main">
+                        <form role="form" id="apply_form">
+                            <fieldset>
+                                <p>One-Space 尚未正式发售，但您可以提交试用申请，我们将开放 100 名试用名额。</p>
+
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <span>款式：</span><br>
+                                        <input type="radio" name="gender" checked="checked"  value="men">
+                                        <label>男款</label>
+                                        <input type="radio" name="gender" value="women">
+                                        <label>女款</label>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <span>颜色：</span><br>
+                                        <input type="radio" name="colors" checked="checked">
+                                        <label>绿</label>
+                                        <input type="radio" name="colors">
+                                        <label>白</label>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="ui radio checkbox" id="men_size">
+                                        <span>尺寸：</span><br>
+                                        <input type="radio" name="men_size" checked="checked">
+                                        <label>S</label>
+                                        <input type="radio" name="men_size">
+                                        <label>M</label>
+                                        <input type="radio" name="men_size">
+                                        <label>L</label>
+                                        <input type="radio" name="men_size">
+                                        <label>XL</label>
+                                        <input type="radio" name="men_size">
+                                        <label>XXL</label>
+                                        <input type="radio" name="men_size">
+                                        <label>XXXL</label>
+                                    </div>
+                                    <div class="ui radio checkbox" id="women_size">
+                                        <span>尺寸：</span><br>
+                                        <input type="radio" name="women_size" checked="checked">
+                                        <label>XS</label>
+                                        <input type="radio" name="women_size">
+                                        <label>S</label>
+                                        <input type="radio" name="women_size">
+                                        <label>M</label>
+                                        <input type="radio" name="women_size">
+                                        <label>L</label>
+                                        <input type="radio" name="women_size">
+                                        <label>XL</label>
+                                    </div>
+                                </div>
+
+                                <div id="size_table">
+                                    <a href="javascript:void(0);">尺寸(身高/胸围)对照表 <i class="fa fa-caret-down"></i></a>
+                                    <table class="tg">
+                                        <tr>
+                                            <th class="tg-031e" rowspan="2">男</th>
+                                            <th class="tg-031e">S(165/88A)</th>
+                                            <th class="tg-031e">M(170/92A)</th>
+                                            <th class="tg-031e">L(175/96A)</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-031e">XL(180/100A)</td>
+                                            <td class="tg-031e">XXL(185/104A)</td>
+                                            <td class="tg-031e">XXXL(190/108A)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-031e" rowspan="2">女</td>
+                                            <td class="tg-031e">XS(155/76A)</td>
+                                            <td class="tg-031e">S(160/80A)</td>
+                                            <td class="tg-031e">M(165/84A)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tg-031e">L(170/88A)</td>
+                                            <td class="tg-031e">XL(175/92A)</td>
+                                            <td class="tg-031e"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="action center">
+                                    <button class="btn green">填好了，提交申请</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel_weixin">
+        <h3>分享到微信</h3>
+        <section class="weixin-section">
+            <img src="http://www.wandoujia.com/qr?c=http://www.wandoujia.com/onespace/" alt="" />
+            <p id="tip_web">
+                1. 打开微信“扫一扫”，扫描二维码。<br><br>
+                2. 等待微信打开网页，然后点击屏幕右上角的“分享”按钮 <span><i class="fa fa-share-square-o"></i></span>。
+            </p>
+            <p id="tip_mobi">
+                1. 将本页面截屏 <br><br>
+                2. 在微信「扫一扫」界面的右上角菜单中选择「从相册选择二维码」<br><br>
+                3. 选择刚刚保存的截屏即可分享。
+            </p>
+        </section>
+    </div>
+
+    <script src="./onespace/scripts/app.js"></script>
+    <script>
+    if(jQuery.browser.mobile || window.innerWidth < 1024){
+
+    } else {
+        var sk = skrollr.init({
+            forceHeight: false
+        });
+    }
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-15790641-46', 'wandoujia.com');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

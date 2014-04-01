@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en" id="h_h">
+<head>
+    <meta charset="utf-8">
+    <title>One-Space | 豌豆荚</title>
+    <meta http-equiv="mobile-agent" content="format=html5; url=http://www.wandoujia.com/onespace">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="豌豆荚,可穿戴设备,全息投影,增强现实,One-Space">
+    <meta name="description" content="豌豆荚 One-Space 发布——完美集成「手机娱乐搜索」及「增强现实」的智能服装，彻底改变局限在小屏幕上的娱乐体验，通过全息投影创造「沉浸式空间」呈现丰富内容，还可以将远方好友投影到身边实时互动！">
+
+    <link rel="stylesheet" href="./onespace/styles/onespace.min.css">
+
+    <script src="./onespace/scripts/onespace.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <a href="./onespace.html"><i class="fa fa-angle-left"></i> 返回</a>
+    </div>
+
+    <div id="h_h_wrap">
+        <div id="top_pic"></div>
+        <ul id="share" data-0="top: 0px;background:rgba(0,0,0,0);" data-50="top: -50px;background:rgba(0,0,0,0);">
+            <li id="s_weibo" title="分享到新浪微博">
+                <i class="icon-weibo"></i><span class="tip">分享到新浪微博</span>
+            </li>
+            <li id="s_douban" title="分享到豆瓣">
+                <i class="icon-douban"></i><span class="tip">分享到豆瓣</span>
+            </li>
+            <li id="s_wechat" title="分享到微信">
+                <a href="#panel_weixin" class="fancybox">
+                    <i class="icon-wechat"></i><span class="tip">分享到微信</span>
+                </a>
+            </li>
+            <li id="s_renren" title="分享到人人网">
+                <i class="icon-renren"></i><span class="tip">分享到人人网</span>
+            </li>
+            <li id="s_q-zone" title="分享到Q-Zone">
+                <i class="icon-qzone"></i><span class="tip">分享到Q-Zone</span>
+            </li>
+            <li id="s_baidutieba" title="分享到百度贴吧">
+                <i class="icon-baidu"></i><span class="tip">分享到百度贴吧</span>
+            </li>
+            <li id="s_twitter" title="分享到 Twitter">
+                <i class="fa fa-twitter"></i><span class="tip">分享到 Twitter</span>
+            </li>
+            <li id="s_facebook" title="分享到 Facebook">
+                <i class="fa fa-facebook"></i><span class="tip">分享到 Facebook</span>
+            </li>
+            <li id="s_googleplus" title="分享到 Google+">
+                <i class="fa fa-google-plus"></i><span class="tip">分享到 Google+</span>
+            </li>
+        </ul>
+        <p>想要 One-Space 嘛？其实豌豆们也很想要，可惜它是个愚人节的玩笑哈！<br><br>
+        之所以开这样一个玩笑，是因为有一天一位很萌的豌豆攻城狮说：作为一个攻城狮，生活中除了 coding 之外最重要的就是有一个女朋友啦！可是如果女朋友不在身边就真的很难过，如果有这样一件神奇的东西就好了……<br><br>虽然不能真正实现，但我们起码可以在愚人节这天严谨科学地陪他一起狂想一下、和大家一起分享这个有爱的主意！搜 happy，so happy! <br><br>如果你也喜欢这个主意，就分享给你的朋友吧！
+        </p>
+    </div>
+    <div id="footer" class="disruptor">
+        <div id="wdj-logo-wrap">
+            <a href="http://www.wandoujia.com">
+                <i class="wan-wdj-logo"></i>
+                <span></span>
+            </a>
+        </div>
+        <p class="interpretation">*最终解释权归豌豆荚所有</p>
+        <p class="copyright">&copy; 2010 - 2014 豌豆实验室</p>
+    </div>
+    <div id="panel_weixin">
+        <h3>分享到微信</h3>
+        <section class="weixin-section">
+            <img src="http://www.wandoujia.com/qr?c=http://www.wandoujia.com./onespace/" alt="" />
+            <p id="tip_web">
+                1. 打开微信“扫一扫”，扫描二维码。<br><br>
+                2. 等待微信打开网页，然后点击屏幕右上角的“分享”按钮 <span><i class="fa fa-share-square-o"></i></span>。
+            </p>
+            <p id="tip_mobi">
+                1. 将本页面截屏 <br><br>
+                2. 在微信「扫一扫」界面的右上角菜单中选择「从相册选择二维码」<br><br>
+                3. 选择刚刚保存的截屏即可分享。
+            </p>
+        </section>
+    </div>
+</body>
+
+<script>
+$(".fancybox").fancybox();
+
+//share to SNS
+var n = window.document;
+var m = "穿在身上的手机娱乐搜索",// title
+    g = "Boom!!! @豌豆荚 One-Space 发布——完美集成「手机娱乐搜索」及「增强现实」的智能服装，彻底改变局限在小屏幕上的娱乐体验，通过全息投影创造「沉浸式空间」呈现丰富内容，还可以将远方好友投影到身边实时互动！猛戳右边申请试用，仅限今天！http://www.wandoujia.com/onespace", //description
+    text_for_twitter = "Boom!!! 豌豆荚 One-Space 发布——完美集成「手机娱乐搜索」及「增强现实」的智能服装，彻底改变局限在小屏幕上的娱乐体验，通过全息投影创造「沉浸式空间」呈现丰富内容，还可以将远方好友投影到身边实时互动！猛戳右边申请试用，仅限今天！", // text weibo
+
+    // pic
+    w = "http://img.wdjimg.com/mms/banner/9/37/b6fe7d5b9c93f914d64003cda0db5379.jpeg",
+    // static URL
+    url = "http%3A%2F%2Fwww.wandoujia.com%2Fonespace",
+
+    // douban
+    D = "http://www.douban.com/share/service?image="+ w +"&href="+ url +"&name="+ m +"&text=" + g,
+
+    // weibo
+    E = "http://service.weibo.com/share/share.php?appkey=1483181040&relateUid=1727978503&title=" + g + "&url=&pic=" + w,
+
+    // facebook
+    S =  "https://www.facebook.com/sharer/sharer.php?s=100&p[title]="+ encodeURIComponent(m) +"&p[summary]="+ g +"&p[url]="+ url +"&p[images]="+ w,
+
+    // google+
+    x = "https://plus.google.com/share?url=" + url,
+
+    // twitter
+    T = "https://twitter.com/intent/tweet?related=wandoujia&text=" + text_for_twitter + "&url=" + url,
+
+    // renren
+    N = "http://widget.renren.com/dialog/share?title=" + encodeURIComponent(m) + "&resourceUrl="+ url +"&pic=" + w + "&description=" + g,
+
+    // QQ-zone
+    Q = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+ url +"&title="+ m +"&pics="+ w +"&summary=" + g,
+
+    // baidu tieba
+    B = "http://tieba.baidu.com/f/commit/share/openShareApi?title="+ m +"&desc="+ g +"&comment="+ g +"&pic="+ w +"&url=" + url;
+
+
+
+$(n).on("click", "#share li", function() {
+    var t = $(this),
+        n = $("<a>");
+    n.attr({
+        target: "_blank"
+    });
+    switch (t[0].id) {
+        case "s_douban":
+            n.attr({
+                href: D
+            });
+            break;
+        case "s_weibo":
+            n.attr({
+                href: E
+            });
+            break;
+        case "s_renren":
+            n.attr({
+                href: N
+            });
+            break;
+        case "s_q-zone":
+            n.attr({
+                href: Q
+            });
+            break;
+        case "s_baidutieba":
+            n.attr({
+                href: B
+            });
+            break;
+        case "s_twitter":
+            n.attr({
+                href: T
+            });
+            break;
+        case "s_facebook":
+            n.attr({
+                href: S
+            });
+            break;
+        case "s_googleplus":
+            n.attr({
+                href: x
+            })
+    }!$.browser.msie && !$.browser.mozilla ? n[0].click() : e.open(n.attr("href"));
+    // _gaq.push(["_trackEvent", "onespace", "share", t[0].id])
+});
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-15790641-46', 'wandoujia.com');
+    ga('send', 'pageview');
+</script>
+</html>
