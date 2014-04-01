@@ -1,0 +1,19 @@
+<script type="text/javascript">
+	if(0) {
+		var a = 1;
+	}
+	alert(a);
+	alert(b);
+	alert(c);
+	var b = function(){};
+	function c(){}
+
+	function A() {
+		this.b = 'b';
+	}
+	A.prototype.c = function() {
+		alert('c');
+	}
+	var a = new A();
+	alert(a.hasOwnProperty('c'));
+</script>
