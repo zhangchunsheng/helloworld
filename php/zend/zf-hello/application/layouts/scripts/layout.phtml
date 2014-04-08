@@ -15,5 +15,10 @@
             <h1><?php echo $this -> escape($this -> title); ?></h1>
             <?php echo $this -> layout() -> content; ?>
         </div>
+        <div id="header">
+            <div id="logged-in-as">
+                <?php echo $this -> loggedInAs(); ?>
+            </div>
+        </div>
     </body>
 </html>
