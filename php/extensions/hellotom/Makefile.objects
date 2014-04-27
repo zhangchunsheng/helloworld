@@ -1,0 +1,8 @@
+hellotom.lo: /home/zhang/dev/php-5.5.9/ext/hellotom/hellotom.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/zhang/dev/php-5.5.9/ext/hellotom $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/zhang/dev/php-5.5.9/ext/hellotom/hellotom.c -o hellotom.lo 
+$(phplibdir)/hellotom.la: ./hellotom.la
+	$(LIBTOOL) --mode=install cp ./hellotom.la $(phplibdir)
+
+./hellotom.la: $(shared_objects_hellotom) $(HELLOTOM_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_hellotom) $(HELLOTOM_SHARED_LIBADD)
+
