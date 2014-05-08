@@ -32,3 +32,10 @@
     function test_func($limit_arg = array('limit'=>10,'interval'=>10)) {
         print_r($limit_arg);
     }
+
+    info(floor(5000001 / 1000000));
+    info(floor(5009999 / 1000000));
+
+    function info($content) {
+        echo $content . "<br />";
+    }
