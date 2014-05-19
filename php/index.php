@@ -36,6 +36,15 @@
     info(floor(5000001 / 1000000));
     info(floor(5009999 / 1000000));
 
+    info(date("Y-m-d H:i:s"));
+    info(time());
+    info(yc_geo_get_timezone_by_city("bj"));
+    $dateTimeZone = new DateTimeZone('America/Denver');
+    $dateTime = new DateTime();
+    $dateTime->setTimestamp(time());
+    $dateTime->setTimezone($dateTimeZone);
+    info($dateTime->format('Y-m-d H:i:s'));
+
     function info($content) {
         echo $content . "<br />";
     }
