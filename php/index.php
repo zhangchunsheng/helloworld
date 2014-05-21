@@ -45,6 +45,11 @@
     $dateTime->setTimezone($dateTimeZone);
     info($dateTime->format('Y-m-d H:i:s'));
 
+    $ids = explode(",", "1,2,3");
+    println($ids);
+    list($carTypeIds, $carTypeName) = array($ids, '');
+    println($carTypeIds);
+
     function info($content) {
         echo $content . "<br />";
     }
