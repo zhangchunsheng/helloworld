@@ -1,5 +1,5 @@
-hellotom.lo: /home/zhang/dev/php-5.5.9/ext/hellotom/hellotom.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/zhang/dev/php-5.5.9/ext/hellotom $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/zhang/dev/php-5.5.9/ext/hellotom/hellotom.c -o hellotom.lo 
+hellotom.lo: /home/zhang/dev/github/helloworld/php/extensions/hellotom/hellotom.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/zhang/dev/github/helloworld/php/extensions/hellotom $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/zhang/dev/github/helloworld/php/extensions/hellotom/hellotom.c -o hellotom.lo 
 $(phplibdir)/hellotom.la: ./hellotom.la
 	$(LIBTOOL) --mode=install cp ./hellotom.la $(phplibdir)
 

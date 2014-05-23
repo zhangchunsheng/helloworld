@@ -4,6 +4,8 @@
     date_default_timezone_set("Asia/Shanghai");
     //error_log("test", 3, "D:/wamp/logs/test");
 
+    echo hellotom_test("ttttttttttttttttttttttttttt");
+
     $url = "";
     $header = "";
     $body = "";

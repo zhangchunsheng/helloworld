@@ -1,7 +1,7 @@
-srcdir = /home/zhang/dev/php-5.5.9/ext/hellotom
-builddir = /home/zhang/dev/php-5.5.9/ext/hellotom
-top_srcdir = /home/zhang/dev/php-5.5.9/ext/hellotom
-top_builddir = /home/zhang/dev/php-5.5.9/ext/hellotom
+srcdir = /home/zhang/dev/github/helloworld/php/extensions/hellotom
+builddir = /home/zhang/dev/github/helloworld/php/extensions/hellotom
+top_srcdir = /home/zhang/dev/github/helloworld/php/extensions/hellotom
+top_builddir = /home/zhang/dev/github/helloworld/php/extensions/hellotom
 EGREP = /bin/grep -E
 SED = /bin/sed
 CONFIGURE_COMMAND = './configure'
@@ -21,7 +21,7 @@ prefix = /usr
 exec_prefix = $(prefix)
 libdir = ${exec_prefix}/lib
 prefix = /usr
-phplibdir = /home/zhang/dev/php-5.5.9/ext/hellotom/modules
+phplibdir = /home/zhang/dev/github/helloworld/php/extensions/hellotom/modules
 phpincludedir = /usr/include/php5
 CC = cc
 CFLAGS = -g -O2
@@ -176,8 +176,8 @@ distclean: clean
 
 .PHONY: all clean install distclean test
 .NOEXPORT:
-hellotom.lo: /home/zhang/dev/php-5.5.9/ext/hellotom/hellotom.c
-	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/zhang/dev/php-5.5.9/ext/hellotom $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/zhang/dev/php-5.5.9/ext/hellotom/hellotom.c -o hellotom.lo 
+hellotom.lo: /home/zhang/dev/github/helloworld/php/extensions/hellotom/hellotom.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/zhang/dev/github/helloworld/php/extensions/hellotom $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/zhang/dev/github/helloworld/php/extensions/hellotom/hellotom.c -o hellotom.lo 
 $(phplibdir)/hellotom.la: ./hellotom.la
 	$(LIBTOOL) --mode=install cp ./hellotom.la $(phplibdir)
 
