@@ -148,3 +148,20 @@
     foreach($updateConfig as $submit => $config) {
         info($submit);
     }
+
+    info(strlen("123456"));
+    info(strlen(123456));
+
+    $max_time = 9999999999;
+    $time = 1322551341;//10
+
+    info(PHP_INT_MAX);//2147483647 9223372036854775807
+    info(is_numeric((int)"1322551341"));
+    info(is_numeric("a") . "t");
+
+    $startTime = -1 ? : $now;
+    info($startTime);
+
+    require('Model/UserFavor.php');
+    $userFavor = new UserFavor();
+    println($userFavor->saveUserFavorList(1, array()));
