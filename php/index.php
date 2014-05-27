@@ -165,3 +165,9 @@
     require('Model/UserFavor.php');
     $userFavor = new UserFavor();
     println($userFavor->saveUserFavorList(1, array()));
+
+    $request = array();
+    $request["name"] = "";
+    info(isset($request["name"]));
+    $num = (int) $request["name"];
+    info($num);
