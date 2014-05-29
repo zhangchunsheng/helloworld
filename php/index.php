@@ -61,6 +61,7 @@
         echo "<br />";
     }
 
+    $weidaoVersionKey = "";
     $updateConfig = array(
         'increase_config_version' => array(
             'message' => '增加版本号成功',
@@ -171,3 +172,25 @@
     info(isset($request["name"]));
     $num = (int) $request["name"];
     info($num);
+
+    function indexAutoload($clazz) {
+        $file = str_replace('_', '/', $clazz);
+
+        if(is_file("/usr/share/pear/$file.php"))
+            require "/usr/share/pear/$file.php";
+    }
+
+    spl_autoload_register('indexAutoload');
+
+    $config = new Zend_Config(array(
+        'proxy' => array(
+            'proxy' => '10.1.5.13:8087',
+            'proxyAuth' => ''
+        ),
+    ));
+    Zend_Registry::set('config', $config);
+
+    info("test");
+    $map = new YCL_Map();
+    println($map->nearbysearch(-33.8670522,151.1957362,500,'l'));
+    info("test");
