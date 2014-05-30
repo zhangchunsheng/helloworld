@@ -192,5 +192,12 @@
 
     info("test");
     $map = new YCL_Map();
-    println($map->nearbysearch(-33.8670522,151.1957362,500,'l'));
+    //println($map->nearbysearch(-33.8670522,151.1957362,500,'l'));
     info("test");
+
+    println($map->getGoogleDistance(array(
+        array('lng' => -73.994529,'lat' => 40.735243),
+        array('lng' => -74.009735,'lat' => 40.705697)
+    )));
+
+    //Array ( [distance] => 5049 [duration] => 760 [driver] => 760 [taxi_amount] => 0 )
