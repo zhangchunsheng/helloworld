@@ -192,7 +192,7 @@
 
     info("test");
     $map = new YCL_Map();
-    //println($map->nearbysearch(-33.8670522,151.1957362,500,'l'));
+    //println($map->nearbysearch(-33.8670522, 151.1957362, 500, 'l'));
     info("test");
 
     println($map->getGoogleDistance(array(
