@@ -210,11 +210,16 @@
 
     //http://en.m.wikipedia.org/wiki/List_of_time_zone_abbreviations
     //http://www.php.net/manual/fr/function.date-default-timezone-set.php
-    $dateTimeZone = new DateTimeZone("America/New_York");
-    $dateTimeZone = new DateTimeZone("Asia/Katmandu");//Asia/Rangoon Asia/Shanghai Asia/Katmandu
+    $dateTimeZone = new DateTimeZone("America/St_Johns");//America/New_York America/St_Johns
+    //$dateTimeZone = new DateTimeZone("Asia/Katmandu");//Asia/Rangoon Asia/Shanghai Asia/Katmandu
     $dateTimeZ = new DateTime("now", $dateTimeZone);
-    $timeOffset = $dateTimeZone->getOffset($dateTimeZ) / 3600;
+    $timeOffset = floor($dateTimeZone->getOffset($dateTimeZ) / 3600);
     info($timeOffset);
+    $timeOffset = round($dateTimeZone->getOffset($dateTimeZ) % 3600) / 60;
+    info($timeOffset);
+
+    $num = -10;
+    info(-$num);
     /**
      * -25200|International Date Line (West) GMT-12|
     -21600|Midway Island, Samoa GMT-11|
