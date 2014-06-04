@@ -201,3 +201,44 @@
     )));
 
     //Array ( [distance] => 5049 [duration] => 760 [driver] => 760 [taxi_amount] => 0 )
+
+    $timezone_abbreviations = DateTimeZone::listAbbreviations();
+    //println($timezone_abbreviations);
+
+    date_default_timezone_set('America/New_York');
+    info(date_default_timezone_get() . ' => ' . date('e') . ' => ' . date('T'));
+
+    //http://en.m.wikipedia.org/wiki/List_of_time_zone_abbreviations
+    //http://www.php.net/manual/fr/function.date-default-timezone-set.php
+    $dateTimeZone = new DateTimeZone("America/New_York");
+    $dateTimeZone = new DateTimeZone("Asia/Katmandu");//Asia/Rangoon Asia/Shanghai Asia/Katmandu
+    $dateTimeZ = new DateTime("now", $dateTimeZone);
+    $timeOffset = $dateTimeZone->getOffset($dateTimeZ) / 3600;
+    info($timeOffset);
+    /**
+     * -25200|International Date Line (West) GMT-12|
+    -21600|Midway Island, Samoa GMT-11|
+    -18000|Hawaii, Honolulu GMT-10|
+    -14400|Alaska GMT-9|
+    -10800|Pacific Standard Time, US, Canada GMT-8|
+    -7200|British Columbia N.E., Santa Fe, Mountain Time GMT-7|
+    -3600|Central America, Chicago, Guatamala, Mexico City GMT-6|
+    0|US, Canada, Bogota, Boston, New York GMT-5|
+    +3600|Canada, Santiago, Atlantic Standard Time GMT-4|
+    +7200|Brazilia, Buenos Aires, Georgetown, Greenland GMT-3|
+    +10800|Mid-Atlantic GMT-2|
+    +14400|Azores, Cape Verde Is., Western Africa Time GMT-1|
+    +18000|London, Iceland, Ireland, Morocco, Portugal GMT|
+    +21600|Amsterdam, Berlin, Bern, Madrid, Paris, Rome, GMT+1|
+    +25200|Athens, Cairo, Cape Town, Finland, Greece, Israel GMT+2|
+    +28800|Ankara, Aden, Baghdad, Beruit, Kuwait, Moscow GMT+3|
+    +32400|Abu Dhabi, Baku, Kabul, Tehran, Tbilisi, Volgograd GMT+4|
+    +36000|Calcutta, Colombo, Islamabad, Madras, New Dehli GMT+5|
+    +39600|Almaty, Dhakar, Kathmandu, Colombo, Sri Lanka GMT+6|
+    +43200|Bangkok, Hanoi, Jakarta, Phnom Penh, Australia GMT+7|
+    +46800|Taipei, Beijing, Hong Kong, Singapore, GMT+8|
+    +50400|Seoul, Tokyo, Central Australia GMT+9|
+    +54000|Brisbane, Canberra, Guam, Melbourne, Sydney, GMT+10|
+    +57600|Magadan, New Caledonia, Solomon Is. GMT+11|
+    +61200|Auckland, Fiji, Kamchatka, Marshall, Wellington, GMT+12|
+     */
