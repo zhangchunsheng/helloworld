@@ -259,3 +259,7 @@
     $c = clone $a;
     $a->property = 'change2';
     var_dump($a, $c);
+
+    $b = $a;
+    $a->property = 'change';
+    var_dump($a, $b);
