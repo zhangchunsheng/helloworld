@@ -268,3 +268,22 @@
     $b = $a;
     $a[0] = 'hh';
     var_dump($a, $b);
+
+    class A1 {
+        public $property1 = 'property A 1';
+        public $property2;
+
+        public function __construct() {
+            $this->property2 = new B();
+        }
+    }
+
+    class B {
+        public $property1 = 'property B 1';
+    }
+
+    $a = new A1();
+    $b = clone $a;
+    $a->property1 = 'new property1';
+    $a->property2->property1 = 'new property2';
+    var_dump($a, $b);
