@@ -253,9 +253,9 @@
      */
 
     class A {
-
+        public $property = 'property 1';
     }
     $a = new A;
     $c = clone $a;
-    $a->property1 = 'change2';
+    $a->property = 'change2';
     var_dump($a, $c);
