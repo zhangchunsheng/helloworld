@@ -263,3 +263,8 @@
     $b = $a;
     $a->property = 'change';
     var_dump($a, $b);
+
+    $a = array('ni', 'shi', 'shui');
+    $b = $a;
+    $a[0] = 'hh';
+    var_dump($a, $b);
