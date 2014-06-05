@@ -61,6 +61,7 @@
         echo "<br />";
     }
 
+    $versionKey = "";
     $weidaoVersionKey = "";
     $updateConfig = array(
         'increase_config_version' => array(
@@ -187,6 +188,9 @@
             'proxy' => '10.1.5.13:8087',
             'proxyAuth' => ''
         ),
+        'oversea_server' => array(
+            'map' => 'http://54.254.199.29'
+        ),
     ));
     Zend_Registry::set('config', $config);
 
@@ -247,3 +251,11 @@
     +57600|Magadan, New Caledonia, Solomon Is. GMT+11|
     +61200|Auckland, Fiji, Kamchatka, Marshall, Wellington, GMT+12|
      */
+
+    class A {
+
+    }
+    $a = new A;
+    $c = clone $a;
+    $a->property1 = 'change2';
+    var_dump($a, $c);
