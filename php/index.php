@@ -191,6 +191,15 @@
         'oversea_server' => array(
             'map' => 'http://54.254.199.29'
         ),
+        'map_baidu' => array(
+            'key' => 'DEd51bf09fcded27d8705981745b7351',
+        ),
+        'map_google' => array(
+            'key' => 'AIzaSyBF5oBKe7CNQUddA4bAokOWgSYNq4NmB4I',
+        ),
+        'map_amap' => array(
+            'key' => '17f352fa1e15fd82d377ea0ea939131c',
+        ),
     ));
     Zend_Registry::set('config', $config);
 
@@ -202,6 +211,16 @@
     println($map->getGoogleDistance(array(
         array('lng' => -73.994529,'lat' => 40.735243),
         array('lng' => -74.009735,'lat' => 40.705697)
+    )));
+
+    println($map->getDistance(array(
+        array('lng' => -73.994529,'lat' => 40.735243),
+        array('lng' => -74.009735,'lat' => 40.705697)
+    )));
+
+    println($map->getAmapDistance(array(
+        array('lng' => 116.481028,'lat' => 39.989643),
+        array('lng' => 114.465302,'lat' => 40.004717)
     )));
 
     //Array ( [distance] => 5049 [duration] => 760 [driver] => 760 [taxi_amount] => 0 )
