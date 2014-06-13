@@ -222,3 +222,35 @@ print_r($xml->ErrorReason->__toString());
 
 $getImeiStatusUrl = 'http://202.108.100.194:8010/eb_b2b_b2c/services/ebridgeWsVendor/getImeiStatus?xml=%3C?xml%20version=%221.0%22%20encoding=%22UTF8%22?%3E%3CImeiStatus%3E%3CImei%3E861586000085254%3C/Imei%3E%3CQueryFrom%3E%E6%98%93%E5%88%B0%3C/QueryFrom%3E%3CQueryType%3E0%3C/QueryType%3E%3CQueryDate%3E2014-06-09%2021:23:22%3C/QueryDate%3E%3CNode1%3E%3C/Node1%3E%3CNode2%3E%3C/Node2%3E%3CNode3%3E%3C/Node3%3E%3CNode4%3E%3C/Node4%3E%3CNode5%3E%3C/Node5%3E%3CNode6%3E%3C/Node6%3E%3C/ImeiStatus%3E&UserID=YIDAO&pwd=666666';
 //echo file_get_contents($getImeiStatusUrl);
+
+$string = "不要迷恋哥";
+$length = strlen($string);
+echo $string;
+$result = array();
+//十进制
+for($i=0;$i<$length;$i++){
+    if(ord($string[$i])>127){
+        $result[] = ord($string[$i]).' '.ord($string[++$i]);
+    }
+}
+var_dump($result);
+//十六进制
+$strings = array();
+foreach($result as $v){
+    $dec = explode(" ",$v);
+    $strings[] = "%".dechex($dec[0])." "."%".dechex($dec[1]);
+}
+var_dump($strings);
+
+$string = '%B2%BB%D2%AA%C3%D4%C1%B5%B8%E7';
+$length = strlen($string);
+$hexs = array();
+for($i=0;$i<$length;$i++){
+    if($string[$i] == '%'){
+        $hexs[] = $string[++$i].$string[++$i];
+    }
+}
+$num = count($hexs);
+for($i=0;$i<$num;$i++){
+    echo chr(hexdec($hexs[$i])).chr(hexdec($hexs[++$i]));
+}
