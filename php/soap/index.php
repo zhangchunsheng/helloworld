@@ -119,6 +119,34 @@ XML;
 
 $client = new Luomor_SoapClient($url);
 
+$xml = <<<XML
+<?xml version="1.0" encoding="UTF8"?>
+<ImeiStatus>
+    <Imei>861586000085254</Imei>
+    <QueryFrom>易到</QueryFrom>
+    <QueryType>0</QueryType>
+    <QueryDate>2014-06-09 21:23:22</QueryDate>
+    <Node1></Node1>
+    <Node2></Node2>
+    <Node3></Node3>
+    <Node4></Node4>
+    <Node5></Node5>
+    <Node6></Node6>
+</ImeiStatus>
+XML;
+
+$sxe = new SimpleXMLElement($xml);
+$sxe->Imei = 861586000085254;
+$sxe->QueryFrom = "易到";
+$sxe->QueryType = 0;
+$sxe->QueryDate = date("Y-m-d H:i:s");
+$sxe->Node1 = '';
+$sxe->Node2 = '';
+$sxe->Node3 = '';
+$sxe->Node4 = '';
+$sxe->Node5 = '';
+$sxe->Node6 = '';
+print_r($sxe->asXML());
 $xml = '<?xml version="1.0" encoding="UTF8"?><ImeiStatus><Imei>861586000085254</Imei><QueryFrom>易到</QueryFrom><QueryType>0</QueryType><QueryDate>2014-06-09 21:23:22</QueryDate><Node1></Node1><Node2></Node2><Node3></Node3><Node4></Node4><Node5></Node5><Node6></Node6></ImeiStatus>';
 $UserID = 'YIDAO';
 $pwd = '666666';
