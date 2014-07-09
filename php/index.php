@@ -223,6 +223,11 @@
         array('lng' => 114.465302,'lat' => 40.004717)
     )));
 
+    println($map->getGoogleDistance(array(
+        array('lng' => 0,'lat' => 90),
+        array('lng' => 114.465302,'lat' => 40.004717)
+    )));
+
     //Array ( [distance] => 5049 [duration] => 760 [driver] => 760 [taxi_amount] => 0 )
 
     $timezone_abbreviations = DateTimeZone::listAbbreviations();

@@ -40,7 +40,10 @@
 2.新功能：增加urlencode测试
 
 [helloworld_1.0.0.1 2014-07-01 张春生]
-1.新功能：增加strlen测试
+1.新功能:增加strlen测试
+
+[helloworld_1.0.0.1 2014-07-09 张春生]
+1.新功能:增加getGoogleDistance测试
 
 --备注分类
 1、新功能：
