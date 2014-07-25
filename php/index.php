@@ -6,6 +6,8 @@
 
     echo hellotom_test("ttttttttttttttttttttttttttt");
 
+    yc_geo_get_city_list(YC_GEO_FLAG_WITH_ALL|YC_GEO_COORD_TYPE_MARS);
+
     $url = "";
     $header = "";
     $body = "";
@@ -223,6 +225,11 @@
         array('lng' => 114.465302,'lat' => 40.004717)
     )));
 
+    println($map->getGoogleDistance(array(
+        array('lng' => 0,'lat' => 90),
+        array('lng' => 114.465302,'lat' => 40.004717)
+    )));
+
     //Array ( [distance] => 5049 [duration] => 760 [driver] => 760 [taxi_amount] => 0 )
 
     $timezone_abbreviations = DateTimeZone::listAbbreviations();
@@ -306,3 +313,70 @@
     $a->property1 = 'new property1';
     $a->property2->property1 = 'new property2';
     var_dump($a, $b);
+
+    info(substr_count("-7-9", "-"));
+
+    //-15d -7-9,-17-19 +9
+    $limit_time_desc = array();
+    $webDesc = array();
+    $sourceDesc = "";
+    $limit_time_set = "+9";//格式: 提前15天: -15d; 限制高峰时间: -7-9,-17-19; 只限9点用车: +9
+    function _get_limit_time_set($coupon, &$limit_time_desc, &$webDesc) {
+        if($coupon['limit_time_set']) {
+            $limit_time_set = $coupon['limit_time_set'];
+            $sourceDesc = '仅适用于';
+
+            $first = $limit_time_set[0];
+            $isMinus = $first == '-';
+            $isAdd = !$isMinus;
+
+            if(stripos($limit_time_set, "d") > 0) {
+                $days = str_replace("d", "", $limit_time_set);
+                if($days > 0) {
+                    $sourceDesc .= "延后" . $days . "天、";
+                } else {
+                    $sourceDesc .= "提前" . -$days . "天、";
+                }
+            } else if(stripos($limit_time_set, "w") > 0) { // -67w  周六日不能用车, +135w, 135w 只能周1,3,5使用
+                $weeks = str_replace("w", "", $limit_time_set);
+                $week = "";
+                for($i = 0 ; $i < strlen($weeks) ; $i++) {
+                    $week .= $weeks[$i] . ",";
+                }
+                $week = substr($week, 0, strlen($week) - 1);
+                if($isMinus) {
+                    $sourceDesc = "周" . $week . "不能用车、";
+                } else {
+                    $sourceDesc = "只能周" . $week . "使用、";
+                }
+            } elseif(stripos($limit_time_set, ",") > 0) {
+                $limit_time_array = explode(",", $limit_time_set);
+                foreach($limit_time_array as $limit_time_key => $limit_time_value) {
+                    $time_set = explode("-", substr($limit_time_value, 1));
+                    $sourceDesc .= "非" . $time_set[0] . ":00-" . $time_set[1] . ":00、";
+                }
+            } elseif(substr_count($limit_time_set, "-") == 2) {
+                $time_set = explode("-", substr($limit_time_set, 1));
+                $sourceDesc .= "非" . $time_set[0] . ":00-" . $time_set[1] . ":00、";
+            } else {
+                $limit_time_set = substr($limit_time_set, 1);
+                $sourceDesc .= $limit_time_set . ":00、";
+            }
+            if($sourceDesc) {
+                //去掉最后一个叹号
+                $limit_time_desc[] = rtrim($sourceDesc, '、');
+                $webDesc['适应时间'] = rtrim($sourceDesc, '、');
+            }
+        }
+    }
+
+    $desc = "abcd";
+    info(strlen($desc));
+    for($i = 0 ; $i < strlen($desc) ; $i++) {
+        info($desc[$i]);
+    }
+
+    $code = null;
+    echo $code ?: "not null";
+    $code = "";
+    echo $code ?: "not null";
