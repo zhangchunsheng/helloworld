@@ -375,3 +375,8 @@
     for($i = 0 ; $i < strlen($desc) ; $i++) {
         info($desc[$i]);
     }
+
+    $code = null;
+    echo $code ?: "not null";
+    $code = "";
+    echo $code ?: "not null";
