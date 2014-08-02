@@ -390,3 +390,12 @@
     echo $code ?: "not null";
     $code = "";
     echo $code ?: "not null";
+
+    mb_internal_encoding("UTF-8");
+    $driver_name = "一二三";
+    echo mb_strlen($driver_name);
+    echo mb_substr($driver_name, 0, 1);
+
+    $driver_name = "a一二三四";
+    echo mb_strlen($driver_name);
+    echo mb_substr($driver_name, 0, 1);
