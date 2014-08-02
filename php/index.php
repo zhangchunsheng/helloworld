@@ -228,7 +228,7 @@
     println($map->getDistanceExtra(array(
         array('lng' => 116.481028,'lat' => 39.989643),
         array('lng' => 114.465302,'lat' => 40.004717)
-    )), '', '');
+    ), '', ''));
 
     println($map->getAmapDistance(array(
         array('lng' => 116.481028,'lat' => 39.989643),
