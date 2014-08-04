@@ -8,6 +8,8 @@
 
     yc_geo_get_city_list(YC_GEO_FLAG_WITH_ALL|YC_GEO_COORD_TYPE_MARS);
 
+    info($_SERVER['SERVER_NAME']);
+
     $url = "";
     $header = "";
     $body = "";

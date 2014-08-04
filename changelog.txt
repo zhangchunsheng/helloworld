@@ -58,6 +58,9 @@
 [helloworld_1.0.0.1 2014-08-02 张春生]
 1.新功能:增加mb_substr测试
 
+[helloworld_1.0.0.1 2014-08-04 张春生]
+1.新功能:增加$_SERVER['SERVER_NAME']测试
+
 --备注分类
 1、新功能：
 2、Bug:
