@@ -204,6 +204,18 @@
         'map_amap' => array(
             'key' => '17f352fa1e15fd82d377ea0ea939131c',
         ),
+        'oauth' => array(
+            0x10 => "sina",
+            'sina' => array(
+                'consumerKey' => '2847323495',
+                'consumerSecret' => 'a27210f2a1bafaf7c496cff086606ce1',
+                'siteUrl' => 'https://api.weibo.com/oauth2/',
+                'apiUrl' => 'https://api.weibo.com/2/',
+                //'callbackUrl' => '',
+                'source_flag' => 0x10,
+                'default_out_user_id' => 1830346007,  // 默认微博账户ID(用于抓取数据，发布公告微博)
+            )
+        ),
     ));
     Zend_Registry::set('config', $config);
 
@@ -389,15 +401,18 @@
     }
 
     $code = null;
-    echo $code ?: "not null";
+    info($code ?: "not null");
     $code = "";
-    echo $code ?: "not null";
+    info($code ?: "not null");
 
     mb_internal_encoding("UTF-8");
     $driver_name = "一二三";
-    echo mb_strlen($driver_name);
-    echo mb_substr($driver_name, 0, 1);
+    info(mb_strlen($driver_name));
+    info(mb_substr($driver_name, 0, 1));
 
     $driver_name = "a一二三四";
-    echo mb_strlen($driver_name);
-    echo mb_substr($driver_name, 0, 1);
+    info(mb_strlen($driver_name));
+    info(mb_substr($driver_name, 0, 1));
+
+    println(YCL_Social_Weibo::getShortUrl("http://www.yongche.com"));
+    println(YCL_Social_Weibo::getShortUrl(array("http://www.yongche.com","http://3g.yongche.com")));
