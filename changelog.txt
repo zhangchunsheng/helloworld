@@ -64,6 +64,9 @@
 [helloworld_1.0.0.1 2014-08-08 张春生]
 1.新功能:增加getShortUrl测试
 
+[helloworld_1.0.0.1 2014-08-13 张春生]
+1.新功能:增加YCL_File_FastDFS::getFile测试
+
 --备注分类
 1、新功能：
 2、Bug:
