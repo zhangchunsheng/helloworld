@@ -417,4 +417,9 @@
     println(YCL_Social_Weibo::getShortUrl("http://www.yongche.com"));
     println(YCL_Social_Weibo::getShortUrl(array("http://www.yongche.com","http://3g.yongche.com")));
 
-    println(YCL_File_FastDFS::getFile("g1", "M00/00/00/CgAL61PrXUSIZzscAAAUGH_5CY0AAAAAQAAAAAAABQw6780.sh"));
+    $filename = "g1/M00/00/00/CgAL61PrXUSIZzscAAAUGH_5CY0AAAAAQAAAAAAABQw6780.sh";
+    //println(YCL_File_FastDFS::getFile("g1/M00/00/00/CgAL61PrXUSIZzscAAAUGH_5CY0AAAAAQAAAAAAABQw6780.sh"));
+
+    $id = substr($filename, strrpos($filename, "/") + 1);
+    $id = substr($id, 0, strrpos($id, "."));
+    echo $id;
