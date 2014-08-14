@@ -421,5 +421,5 @@
     //println(YCL_File_FastDFS::getFile("g1/M00/00/00/CgAL61PrXUSIZzscAAAUGH_5CY0AAAAAQAAAAAAABQw6780.sh"));
 
     $id = substr($filename, strrpos($filename, "/") + 1);
-    $id = substr($id, 0, strrpos($id, "."));
+    $id = substr($id, 0, strrpos($id, ".") > 0 ? strrpos($id, ".") : strlen($id));
     echo $id;
