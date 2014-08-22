@@ -423,4 +423,22 @@
     $id = substr($filename, strrpos($filename, "/") + 1);
     $name = substr($id, 0, strrpos($id, ".") > 0 ? strrpos($id, ".") : strlen($id));
     $suffix = strrpos($id, ".") > 0 ? substr($id, strrpos($id, ".") + 1) : "txt";
-    echo $name . " " . $suffix;
+    info($name . " " . $suffix);
+
+    $id = "g1_M00_00_00_CgAL61P2vi2ILjIFAABCoHONyA8AAAAAQACkPwAAEK4729.png";
+
+    info(_getFastDFSId($id));
+    function _getFastDFSId($id) {
+        $ids = explode("_", $id);
+        $fastdfs_id = "";
+        for($i = 0 ; $i < 4 ; $i++) {
+            $fastdfs_id .= $ids[$i] . "/";
+        }
+
+        for($i = 0 ; $i < 4 ; $i++) {
+            array_shift($ids);
+        }
+
+        $fastdfs_id .= implode("_", $ids);
+        return $fastdfs_id;
+    }
