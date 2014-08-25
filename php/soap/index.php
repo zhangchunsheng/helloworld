@@ -3,10 +3,9 @@
  * @title soap
  * @description
  * soap
- * @author zhangchunsheng@yongche.com
+ * @author zhangchunsheng423@gmail.com
  * @version V3.0
  * @date 2014-06-12
- * @copyright  Copyright (c) 2010-2014 yongche Inc. (http://www.yongche.com)
  */
 $url = "http://202.108.100.194:8010/eb_b2b_b2c/services/ebridgeWsVendor?wsdl";
 

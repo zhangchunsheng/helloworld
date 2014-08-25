@@ -24,8 +24,8 @@
     //error_log($message, 3, "/var/log/httpd/coolpen_log-{$date}");
     //error_log("[" . date("Y-m-d H:i:s") . "] " . $message . "\r", 3, "D:/wamp/logs/coolpen_log-{$date}");
 
-    $url = "{USER}.yongche.org";
-    $url = "testing.yongche.org";
+    $url = "";
+    $url = "";
     info("test" . strpos($url, "{USER}"));
     info("test" . gettype(strpos($url, "{USER}")));
     if(strpos($url, "{USER}") > 0 || strpos($url, "{USER}") === 0) {
