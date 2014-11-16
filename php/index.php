@@ -442,3 +442,76 @@
         $fastdfs_id .= implode("_", $ids);
         return $fastdfs_id;
     }
+
+    $config = array(
+        'cache' => array(
+            'redis' => array('host' => array('10.0.11.223', '10.0.11.224')),
+        ),
+        'databases' => array(
+            'open' => array(
+                'adapter' => 'mysqli',
+                'params'  => array(
+                    'host'     => '10.0.11.224',
+                    'username' => 'yongche',
+                    'password' => '',
+                    'dbname'   => 'yc_open',
+                    'charset'  => 'utf8',
+                )
+            ),
+            'oauth2' => array(
+                'adapter' => 'mysqli',
+                'params'  => array(
+                    'host'     => '10.0.11.224',
+                    'username' => 'yongche',
+                    'password' => '',
+                    'dbname'   => 'yc_oauth2',
+                    'charset'  => 'utf8',
+                )
+            ),
+        )
+    );
+    YCL_OAuth2_Server_Resource::setConfig($config);
+
+    $server = new YCL_OAuth2_Server_Resource();
+
+
+    try {
+        $accessToken = 1;
+        $data = $server->isValid($accessToken);
+    } catch(Exception $e) {
+        println("================================");
+        println($e);
+        println("================================");
+        error_log($e);
+    }
+
+    println("");
+
+    try {
+        $accessToken = "21a10fb7fa4170e4c8f14d1c489715cf4a5312db";//with user_id
+        $data = $server->isValid($accessToken);
+        println("================================");
+        println("clientId:" . $server->getClientId());
+        println("ownerType:" . $server->getOwnerType());
+        println("ownerId:" . $server->getOwnerId());
+        println("accessToken:" . $server->getAccessToken());
+        println("deviceId:" . $server->getDeviceId());
+        println("uuid:" . $server->getUUID());
+        println("================================");
+
+        println("");
+
+        $accessToken = "f58f057042a41def455a725702eeb6e58f036392";//no user_id,for client grant
+        println("================================");
+        $data = $server->isValid($accessToken);
+        println("clientId:" . $server->getClientId());
+        println("ownerType:" . $server->getOwnerType());
+        println("ownerId:" . $server->getOwnerId());
+        println("accessToken:" . $server->getAccessToken());
+        println("deviceId:" . $server->getDeviceId());
+        println("uuid:" . $server->getUUID());
+        println("================================");
+    } catch(Exception $e) {
+        println($e);
+        error_log($e);
+    }
