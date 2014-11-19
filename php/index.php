@@ -224,6 +224,20 @@
     //println($map->nearbysearch(-33.8670522, 151.1957362, 500, 'l'));
     info("test");
 
+    /**
+     * 美国
+    Array ( [type] => google [distance] => 5049 [duration] => 760 [driver] => 760 [taxi_amount] => 0 )
+    Array ( [type] => google [distance] => 5049 [duration] => 760 [driver] => 760 [taxi_amount] => 0 )
+    台湾
+    Array ( [type] => google [distance] => 1648 [duration] => 279 [driver] => 279 [taxi_amount] => 0 )
+    北京
+    Array ( [type] => baidu [distance] => 261852 [duration] => 14845 [driver] => 14845 [taxi_amount] => 0 )
+    Array ( [type] => baidu [distance] => 261852 [duration] => 14845 [driver] => 14845 [taxi_amount] => 0 )
+    Array ( [type] => amap [distance] => 259952 [duration] => 13320 [driver] => 13320 [taxi_amount] => 0 )
+     */
+
+    // 美国
+    println("美国");
     println($map->getGoogleDistance(array(
         array('lng' => -73.994529,'lat' => 40.735243),
         array('lng' => -74.009735,'lat' => 40.705697)
@@ -234,6 +248,14 @@
         array('lng' => -74.009735,'lat' => 40.705697)
     )));
 
+    // 台湾
+    println("台湾");
+    println($map->getDistance(array(
+        array('lng' => 121.5234,'lat' => 25.0503),
+        array('lng' => 121.5303,'lat' => 25.0447)
+    )));
+
+    println("北京");
     println($map->getDistance(array(
         array('lng' => 116.481028,'lat' => 39.989643),
         array('lng' => 114.465302,'lat' => 40.004717)

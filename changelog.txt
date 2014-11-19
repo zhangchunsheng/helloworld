@@ -76,6 +76,9 @@
 [helloworld_1.0.0.1 2014-11-16 张春生]
 1.新功能:add oauth2 validate method
 
+[helloworld_1.0.0.1 2014-11-19 张春生]
+1.新功能:增加台湾距离测试功能
+
 --备注分类
 1、新功能：
 2、Bug:
