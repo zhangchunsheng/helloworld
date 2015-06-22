@@ -50,6 +50,34 @@
 
 [helloworld_1.0.0.1 2014-07-25 张春生]
 1.新功能:增加null测试
+2.新功能:增加mongo测试
+
+[helloworld_1.0.0.1 2014-07-25 张春生]
+1.新功能:增加getDistance测试
+
+[helloworld_1.0.0.1 2014-08-02 张春生]
+1.新功能:增加mb_substr测试
+
+[helloworld_1.0.0.1 2014-08-04 张春生]
+1.新功能:增加$_SERVER['SERVER_NAME']测试
+
+[helloworld_1.0.0.1 2014-08-08 张春生]
+1.新功能:增加getShortUrl测试
+
+[helloworld_1.0.0.1 2014-08-13 张春生]
+1.新功能:增加YCL_File_FastDFS::getFile测试
+
+[helloworld_1.0.0.1 2014-08-14 张春生]
+1.新功能:增加substr测试
+
+[helloworld_1.0.0.1 2014-08-22 张春生]
+1.新功能:增加getFastDFSID测试
+
+[helloworld_1.0.0.1 2014-11-16 张春生]
+1.新功能:add oauth2 validate method
+
+[helloworld_1.0.0.1 2014-11-19 张春生]
+1.新功能:增加台湾距离测试功能
 
 --备注分类
 1、新功能：
