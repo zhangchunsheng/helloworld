@@ -1,12 +1,12 @@
-package com.neo;
+package com.luomor;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.neo.mapper.UserMapper;
-import com.neo.model.User;
+import com.luomor.mapper.UserMapper;
+import com.luomor.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,7 +37,7 @@ public class MyBatisPlusTest {
         User user = new User();
         user.setName("微笑");
         user.setAge(3);
-        user.setEmail("neo@tooool.org");
+        user.setEmail("luomor@tooool.org");
         assertThat(userMapper.insert(user)).isGreaterThan(0);
         // 成功直接拿会写的 ID
         assertThat(user.getId()).isNotNull();

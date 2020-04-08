@@ -1,8 +1,8 @@
-package com.neo.service.impl;
+package com.luomor.service.impl;
 
-import com.neo.model.Customer;
-import com.neo.repository.CustomerRepository;
-import com.neo.service.CustomersInterface;
+import com.luomor.model.Customer;
+import com.luomor.repository.CustomerRepository;
+import com.luomor.service.CustomersInterface;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
 import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;

@@ -1,7 +1,7 @@
-package com.neo.controller;
+package com.luomor.controller;
 
-import com.neo.entity.Visitor;
-import com.neo.repository.VisitorRepository;
+import com.luomor.entity.Visitor;
+import com.luomor.repository.VisitorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

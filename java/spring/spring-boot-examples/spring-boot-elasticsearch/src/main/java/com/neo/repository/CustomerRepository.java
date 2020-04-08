@@ -1,7 +1,7 @@
 
-package com.neo.repository;
+package com.luomor.repository;
 
-import com.neo.model.Customer;
+import com.luomor.model.Customer;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;

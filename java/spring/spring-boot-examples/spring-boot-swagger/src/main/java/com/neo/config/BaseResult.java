@@ -1,4 +1,4 @@
-package com.neo.config;
+package com.luomor.config;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

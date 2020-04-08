@@ -1,4 +1,4 @@
-package com.neo.model;
+package com.luomor.model;
 
 public class User {
     private Long id;

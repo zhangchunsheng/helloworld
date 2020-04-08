@@ -1,7 +1,7 @@
 
-package com.neo.repository;
+package com.luomor.repository;
 
-import com.neo.model.Message;
+import com.luomor.model.Message;
 
 import java.util.List;
 

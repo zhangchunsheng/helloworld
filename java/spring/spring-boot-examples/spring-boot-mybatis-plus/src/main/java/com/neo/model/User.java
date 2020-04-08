@@ -1,4 +1,4 @@
-package com.neo.model;
+package com.luomor.model;
 
 import lombok.Data;
 

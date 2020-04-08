@@ -1,4 +1,4 @@
-package com.neo;
+package com.luomor;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

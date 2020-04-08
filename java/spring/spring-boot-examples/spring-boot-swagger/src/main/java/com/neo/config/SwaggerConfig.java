@@ -1,4 +1,4 @@
-package com.neo.config;
+package com.luomor.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .select()
                 // 自行修改为自己的包路径
-                .apis(RequestHandlerSelectors.basePackage("com.neo.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.luomor.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -1,4 +1,4 @@
-package com.neo.config;
+package com.luomor.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("com.neo.mapper")
+@MapperScan("com.luomor.mapper")
 public class MybatisPlusConfig {
 
     /**

@@ -1,6 +1,6 @@
-package com.neo.service;
+package com.luomor.service;
 
-import com.neo.model.Customer;
+import com.luomor.model.Customer;
 
 import java.util.List;
 

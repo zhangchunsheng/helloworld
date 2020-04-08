@@ -1,4 +1,4 @@
-package com.neo.entity;
+package com.luomor.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

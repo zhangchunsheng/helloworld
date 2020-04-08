@@ -1,5 +1,5 @@
 
-package com.neo.model;
+package com.luomor.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;

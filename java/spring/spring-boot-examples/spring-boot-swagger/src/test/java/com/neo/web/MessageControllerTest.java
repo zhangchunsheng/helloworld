@@ -1,4 +1,4 @@
-package com.neo.web;
+package com.luomor.web;
 
 import org.junit.Before;
 import org.junit.Test;

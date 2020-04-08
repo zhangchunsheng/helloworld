@@ -1,9 +1,9 @@
 
-package com.neo.controller;
+package com.luomor.controller;
 
-import com.neo.config.BaseResult;
-import com.neo.model.Message;
-import com.neo.repository.MessageRepository;
+import com.luomor.config.BaseResult;
+import com.luomor.model.Message;
+import com.luomor.repository.MessageRepository;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

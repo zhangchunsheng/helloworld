@@ -1,6 +1,6 @@
-package com.neo.repository;
+package com.luomor.repository;
 
-import com.neo.model.Customer;
+import com.luomor.model.Customer;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -38,7 +38,7 @@ public class CustomerRepositoryTest {
     public void saveCustomers() {
         repository.save(new Customer("Alice", "北京",13));
         repository.save(new Customer("Bob", "北京",23));
-        repository.save(new Customer("neo", "西安",30));
+        repository.save(new Customer("luomor", "西安",30));
         repository.save(new Customer("summer", "烟台",22));
     }
 
@@ -55,7 +55,7 @@ public class CustomerRepositoryTest {
     @Test
     public void deleteCustomers() {
         repository.deleteAll();
-//        repository.deleteByUserName("neo");
+//        repository.deleteByUserName("luomor");
     }
 
     @Test
